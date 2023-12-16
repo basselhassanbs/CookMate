@@ -58,6 +58,7 @@ const CreateRecipe: React.FC = () => {
           label='Image URL'
           name='imageURL'
           type='text'
+          className='mt-2'
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.imageURL}
@@ -71,6 +72,7 @@ const CreateRecipe: React.FC = () => {
           id='description'
           label='Description'
           name='description'
+          className='mt-2'
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.description}
@@ -79,7 +81,12 @@ const CreateRecipe: React.FC = () => {
           <div>{formik.errors.description}</div>
         ) : null}
 
-        <Button type='submit'>Submit</Button>
+        <button
+          className='rounded bg-blue-500 px-5 py-1 mt-3 text-white font-medium'
+          type='submit'
+        >
+          Submit
+        </button>
       </form>
     </Box>
   );
