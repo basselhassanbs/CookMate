@@ -7,7 +7,7 @@ import prisma from '@/lib/prisma';
 const RecipesGrid: React.FC = () => {
   const [recipes, setRecipes] = useState([]);
   useEffect(() => {
-    fetch('/api/recipes')
+    fetch('/api/recipes', { cache: 'no-cache' })
       .then((res) => res.json())
       .then((data) => {
         setRecipes(data);
@@ -22,7 +22,7 @@ const RecipesGrid: React.FC = () => {
           </Grid.Col>
         ))
       ) : (
-        <></>
+        <div className='text-2xl font-bold'>No data to show!</div>
       )}
     </Grid>
   );
