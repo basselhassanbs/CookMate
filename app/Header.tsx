@@ -42,7 +42,12 @@ const Header: React.FC = () => {
       // <div>
       //   <Link href='/api/auth/signin'>Log in</Link>
       // </div>
-      <Button variant='filled' className='self-center' onClick={() => signIn()}>
+      <Button
+        variant='filled'
+        color='blue'
+        className='self-center'
+        onClick={() => signIn()}
+      >
         Log in
       </Button>
     );
@@ -68,6 +73,7 @@ const Header: React.FC = () => {
         <Button
           className='self-center'
           variant='filled'
+          color='blue'
           onClick={() => {
             router.push('/create');
           }}
@@ -77,6 +83,7 @@ const Header: React.FC = () => {
         </Button>
         <Button
           variant='filled'
+          color='blue'
           className='self-center'
           onClick={() => signOut()}
         >
