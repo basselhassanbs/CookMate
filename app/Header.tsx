@@ -45,7 +45,7 @@ const Header: React.FC = () => {
       <Button
         variant='filled'
         color='blue'
-        className='self-center'
+        className='self-center bg-current'
         onClick={() => signIn()}
       >
         Log in
@@ -71,7 +71,7 @@ const Header: React.FC = () => {
           {session?.user?.name} ({session?.user?.email})
         </div>
         <Button
-          className='self-center'
+          className='self-center bg-current'
           variant='filled'
           color='blue'
           onClick={() => {
@@ -84,7 +84,7 @@ const Header: React.FC = () => {
         <Button
           variant='filled'
           color='blue'
-          className='self-center'
+          className='self-center bg-current'
           onClick={() => signOut()}
         >
           Log out
