@@ -44,7 +44,7 @@ const Header: React.FC = () => {
       // </div>
       <Button
         variant='filled'
-        color='blue'
+        color='indigo'
         className='self-center bg-current'
         onClick={() => signIn()}
       >
