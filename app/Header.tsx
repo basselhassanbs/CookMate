@@ -9,8 +9,6 @@ import { SearchInput } from './SearchInput';
 
 const Header: React.FC = () => {
   const router = useRouter();
-  // const isActive: (pathname: string) => boolean = (pathname) =>
-  //   router.pathname === pathname;
 
   const { data: session, status } = useSession();
 
@@ -44,7 +42,7 @@ const Header: React.FC = () => {
       // <div>
       //   <Link href='/api/auth/signin'>Log in</Link>
       // </div>
-      <Button className='self-center' onClick={() => signIn()}>
+      <Button variant='filled' className='self-center' onClick={() => signIn()}>
         Log in
       </Button>
     );
@@ -69,6 +67,7 @@ const Header: React.FC = () => {
         </div>
         <Button
           className='self-center'
+          variant='filled'
           onClick={() => {
             router.push('/create');
           }}
@@ -76,7 +75,11 @@ const Header: React.FC = () => {
         >
           New Recipe
         </Button>
-        <Button className='self-center' onClick={() => signOut()}>
+        <Button
+          variant='filled'
+          className='self-center'
+          onClick={() => signOut()}
+        >
           Log out
         </Button>
       </div>
