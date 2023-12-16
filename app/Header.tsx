@@ -42,14 +42,12 @@ const Header: React.FC = () => {
       // <div>
       //   <Link href='/api/auth/signin'>Log in</Link>
       // </div>
-      <Button
-        variant='filled'
-        color='indigo'
-        className='self-center bg-current'
+      <button
+        className='self-center rounded bg-blue-500 px-4 py-1 text-white font-medium'
         onClick={() => signIn()}
       >
         Log in
-      </Button>
+      </button>
     );
   }
 
@@ -70,25 +68,20 @@ const Header: React.FC = () => {
         <div className='self-center mr-2'>
           {session?.user?.name} ({session?.user?.email})
         </div>
-        <Button
-          className='self-center bg-current'
-          variant='filled'
-          color='blue'
+        <button
+          className='self-center mr-2 rounded bg-blue-500 px-4 py-1 text-white font-medium'
           onClick={() => {
             router.push('/create');
           }}
-          mr={'sm'}
         >
           New Recipe
-        </Button>
-        <Button
-          variant='filled'
-          color='blue'
-          className='self-center bg-current'
+        </button>
+        <button
+          className='self-center rounded bg-blue-500 px-4 py-1 text-white font-medium'
           onClick={() => signOut()}
         >
           Log out
-        </Button>
+        </button>
       </div>
     );
   }

@@ -16,7 +16,7 @@ const RecipeCard: React.FC<{ recipe: RecipeCardProps }> = ({ recipe }) => {
   const userName = recipe.user ? recipe.user.name : 'Unknown author';
   return (
     <Card shadow='sm' padding='lg' radius='md' withBorder>
-      <Card.Section component='a' href={`/p/${recipe.id}`}>
+      <Card.Section>
         <Image src={recipe.imageURL} className='h-48' alt='Norway' />
       </Card.Section>
 
