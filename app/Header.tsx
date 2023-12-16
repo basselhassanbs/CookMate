@@ -4,7 +4,7 @@ import Link from 'next/link';
 // import { useRouter } from 'next/router';
 import { useRouter } from 'next/navigation';
 import { Button, Text } from '@mantine/core';
-import { signOut, useSession } from 'next-auth/react';
+import { signIn, signOut, useSession } from 'next-auth/react';
 import { SearchInput } from './SearchInput';
 
 const Header: React.FC = () => {
@@ -13,7 +13,6 @@ const Header: React.FC = () => {
   //   router.pathname === pathname;
 
   const { data: session, status } = useSession();
-  console.log('session', session);
 
   let left = (
     <div>
@@ -42,9 +41,12 @@ const Header: React.FC = () => {
 
   if (!session) {
     right = (
-      <div>
-        <Link href='/api/auth/signin'>Log in</Link>
-      </div>
+      // <div>
+      //   <Link href='/api/auth/signin'>Log in</Link>
+      // </div>
+      <Button className='self-center' onClick={() => signIn()}>
+        Log in
+      </Button>
     );
   }
 
